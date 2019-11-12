@@ -13,7 +13,8 @@ public class LambdaFunctionHandler implements RequestStreamHandler {
 
         // TODO: Implement your stream handler. See https://docs.aws.amazon.com/lambda/latest/dg/java-handler-io-type-stream.html for more information.
         // This demo implementation capitalizes the characters from the input stream.
-        int letter = 0;
+        String l_str = "";
+    	int letter = 0;
         while((letter = input.read()) >= 0) {
             output.write(Character.toUpperCase(letter));
         }
